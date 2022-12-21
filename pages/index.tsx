@@ -17,6 +17,10 @@ export default function Home() {
         let result:string = await invoke('greet', {name: 'World'});
         console.log(`result = ${result}`);
         setName(result);
+
+        let runexample: string = await invoke('runexample',{});
+        console.log(`runexample = ${runexample}`);
+        setName(runexample);
       }
     };
     fetchData().catch(console.error);
